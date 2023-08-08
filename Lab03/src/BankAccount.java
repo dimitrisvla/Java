@@ -17,14 +17,14 @@ public class BankAccount {
 	public int withdraw(int withdrawMoney) {
 		if(accountMoney >= withdrawMoney) {
 			accountMoney -= withdrawMoney;
-			return accountMoney;
 		}else {
-			return 0;
+			System.out.println("Not enough money in your account.");
 		}
+		return accountMoney;
 	}
 	
 	public void printStatement() {
-		System.out.println("Name: " + accountName + " balance: " + accountMoney);
+		System.out.println("Name: " + accountName + ", balance: " + accountMoney);
 	}
 	
 }
